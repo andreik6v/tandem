@@ -10,37 +10,22 @@ macOS
 
 ## What it is
 
-This is the video editor I'm building for my Convex videos to replace Filmora. It's built so my agents can edit the same project as me, through a CLI and an MCP server, while I work in the app.
+My fork of [Mike Cann's Tandem](https://github.com/mikecann/tandem), a video editor my AI agents can edit alongside me, through a CLI and an MCP server, while I work in the app. Upstream doesn't take issues or PRs, so changes live here. Pull Mike's updates with `git fetch upstream && git merge upstream/main`.
 
-A project is just a `.tandem` JSON file in the video's folder. Tandem finds the media there, pairs up my Record It camera and screen takes, and does transcripts, waveforms and the cutout in the background.
+A project is just a `.tandem` JSON file in the video's folder. Tandem finds the media there, pairs up camera and screen takes, and does transcripts, waveforms and the cutout in the background.
 
-![Tandem editing the decision-models video](docs/header.jpg)
+![Tandem editing a video](docs/header.jpg)
 
 ## Get it
 
-Paste this into your AI coding agent (Claude Code, Codex, Cursor...):
-
-> Fork https://github.com/mikecann/tandem to my GitHub account and clone my fork
-> (if I don't use GitHub, or want to keep my copy private, just clone it instead),
-> then make it my own. It's one of Mike Cann's personal tools, so read the README
-> first, change anything specific to his setup to suit mine, then help me get it
-> running.
-
-Heads up, I'm not taking issues or pull requests on this one, so only I can open
-them. It's built around my setup and I don't want to be the one deciding what goes
-in, or accidentally breaking your version when I change something. Fork it and have
-your agent make it your own instead.
-
-### Or set it up by hand
-
-You'll need macOS 15 or newer and Xcode 26 or newer with Swift 6. Some analysis
+You'll need macOS 15 or newer and Xcode 26 or newer with Swift 6 (the Command Line Tools alone can't build it: SwiftUI's macros ship only with Xcode). Some analysis
 features, such as SpeechAnalyzer transcription, need macOS 26. SwiftPM fetches
 the Lottie dependency during the first build. Install ffmpeg if you want to
 import formats macOS can't decode, such as WebM (`brew install ffmpeg`).
 
 ```bash
-git clone https://github.com/mikecann/tandem.git
-cd tandem
+git clone https://github.com/andreik6v/tandem.git ~/dev/tandem
+cd ~/dev/tandem
 bash setup_mac.sh
 bash install.sh
 tandem app
@@ -136,7 +121,7 @@ test, which may install a language model and needs macOS 26.
 
 ## More tools
 
-You can find my other tools at [mikerosoft.app](https://mikerosoft.app).
+Mike's other tools are at [mikerosoft.app](https://mikerosoft.app).
 
 MIT licensed. See [LICENSE](LICENSE). Bundled fonts and other third-party
 assets retain their own licences, which ship alongside them.

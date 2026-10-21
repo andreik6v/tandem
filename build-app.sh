@@ -86,7 +86,7 @@ if [[ "$SIGNING_IDENTITY" == "-" ]]; then
 fi
 
 codesign --force --timestamp=none --sign "$SIGNING_IDENTITY" \
-  --identifier "com.mikerosoft.tandem.cli" "$CLI_BIN" >/dev/null
+  --identifier "com.andreik6v.tandem.cli" "$CLI_BIN" >/dev/null
 codesign --force --timestamp=none --sign "$SIGNING_IDENTITY" \
   ${SIGNING_REQUIREMENTS[@]+"${SIGNING_REQUIREMENTS[@]}"} "$APP_DIR" >/dev/null
 

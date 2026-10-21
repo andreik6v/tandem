@@ -9,7 +9,7 @@ Tandem is Mike's video editor, built for working in turns with an agent:
 you edit the project through the `tandem` command, Mike reviews in the
 app, and the timeline shows him exactly what you changed. The guide's
 entry point is `docs/AGENTS.md` in the Tandem repo
-(`~/dev/me/tandem/docs/AGENTS.md` on Mike's Mac): how editing works, the
+(`~/dev/tandem/docs/AGENTS.md` on this Mac): how editing works, the
 command index, and a table of recipes and topics in `docs/agents/` (B-roll,
 titles, cards, shorts, captions, sound, review and more). `tandem help
 <command>` gives a command's options, and `tandem help <edit command>`

@@ -196,7 +196,7 @@ Started from a video's folder it uses that folder's project. To pin one
 project, or to use it from anywhere:
 
 ```bash
-claude mcp add --scope user tandem -- ~/Applications/Tandem.app/Contents/MacOS/tandem mcp --project "/Users/m5-mike/dev/convex/convex-videos/decision-models/Decision Models.tandem"
+claude mcp add --scope user tandem -- ~/Applications/Tandem.app/Contents/MacOS/tandem mcp --project "$HOME/Movies/My Video/My Video.tandem"
 ```
 
 Every tool also takes a `project` argument, so one server can work on any
@@ -207,7 +207,7 @@ For Codex, in `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.tandem]
-command = "/Users/m5-mike/Applications/Tandem.app/Contents/MacOS/tandem"
+command = "/Users/andreichira/Applications/Tandem.app/Contents/MacOS/tandem"
 args = ["mcp"]
 ```
 
@@ -234,7 +234,7 @@ and a bearer token are in the project's lock file,
 `<video folder>/.tandem/<name>.lock`:
 
 ```bash
-LOCK="$HOME/dev/convex/convex-videos/decision-models/.tandem/Decision Models.lock"
+LOCK="$HOME/Movies/My Video/.tandem/My Video.lock"
 PORT=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['port'])" "$LOCK")
 TOKEN=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['token'])" "$LOCK")
 curl -s -H "Authorization: Bearer $TOKEN" -H "X-Tandem-Author: claude" \
